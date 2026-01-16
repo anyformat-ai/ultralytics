@@ -39,11 +39,21 @@ class DilatedBlock(nn.Module):
         self.dcv = Conv(c, c, k=self.k, s=1)
 
     def dilated_conv(self, x, dilation):
+        """Apply dilated convolution, handling both fused and non-fused cases."""
         act = self.dcv.act
-        bn = self.dcv.bn
-        weight = self.dcv.conv.weight
         padding = dilation * (self.k//2)
-        return act(bn(F.conv2d(x, weight, stride=1, padding=padding, dilation=dilation)))
+
+        # Handle fused and non-fused cases
+        if hasattr(self.dcv, 'bn') and self.dcv.bn is not None:
+            # Non-fused: apply conv -> bn -> act
+            bn = self.dcv.bn
+            weight = self.dcv.conv.weight
+            return act(bn(F.conv2d(x, weight, stride=1, padding=padding, dilation=dilation)))
+        else:
+            # Fused: conv already includes bn, just apply conv -> act
+            weight = self.dcv.conv.weight
+            bias = self.dcv.conv.bias if hasattr(self.dcv.conv, 'bias') else None
+            return act(F.conv2d(x, weight, bias=bias, stride=1, padding=padding, dilation=dilation))
 
     def forward(self, x):
         """'forward()' applies the YOLO FPN to input data."""
