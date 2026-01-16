@@ -76,6 +76,7 @@ from .conv import (
     RepConv,
     SpatialAttention,
 )
+from .g2l_crm import DilatedBlock, DilatedBottleneck, G2L_CRM
 from .head import (
     OBB,
     OBB26,
@@ -152,7 +153,10 @@ __all__ = (
     "DeformableTransformerDecoder",
     "DeformableTransformerDecoderLayer",
     "Detect",
+    "DilatedBlock",
+    "DilatedBottleneck",
     "Focus",
+    "G2L_CRM",
     "GhostBottleneck",
     "GhostConv",
     "HGBlock",
