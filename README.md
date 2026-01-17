@@ -27,6 +27,38 @@ Find detailed documentation in the [Ultralytics Docs](https://docs.ultralytics.c
 
 Request an Enterprise License for commercial use at [Ultralytics Licensing](https://www.ultralytics.com/license).
 
+---
+
+## G2L_CRM Architecture Extension
+
+**This fork includes the G2L_CRM (Global-to-Local Context Refining Module)** architecture for document layout analysis.
+
+| Component | Description |
+|-----------|-------------|
+| **Author** | Juan Huguet ([@anyformat-ai](https://github.com/anyformat-ai)) |
+| **License** | Ultralytics Enterprise License |
+| **Based on** | [DocLayout-YOLO](https://github.com/opendatalab/DocLayout-YOLO) ([arXiv:2410.12628](https://arxiv.org/abs/2410.12628)) |
+
+### Added Modules
+
+- **`G2L_CRM`** - Global-to-Local Context Refining Module for multi-scale feature extraction
+- **`DilatedBlock`** - Dilated convolution blocks with configurable dilation rates
+- **`DilatedBottleneck`** - Bottleneck structure with dilated convolutions
+
+### Model Configuration
+
+- **`yolov10m-doclayout.yaml`** - YOLOv10m variant optimized for DocLayNet (11 classes)
+
+### Pre-trained Weights
+
+Located in `weights/`:
+- `doclayout_yolo_doclaynet_imgsz1120_docsynth_pretrain.pt`
+- `doclayout_yolo_docstructbench_imgsz1024.pt`
+
+> **Enterprise License Notice**: The G2L_CRM extensions in this repository are licensed under the Ultralytics Enterprise License. For commercial use, please contact [Ultralytics Licensing](https://www.ultralytics.com/license).
+
+---
+
 <a href="https://platform.ultralytics.com/ultralytics/yolo26" target="_blank">
   <img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/refs/heads/main/yolo/performance-comparison.png" alt="YOLO26 performance plots">
 </a>

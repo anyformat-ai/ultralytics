@@ -1,6 +1,9 @@
-# Ultralytics YOLO 🚀, AGPL-3.0 license
+# Ultralytics Enterprise License - https://ultralytics.com/license
 # YOLOv10m-DocLayout model with G2L_CRM modules for document layout analysis
-# Adapted from DocLayout-YOLO: https://github.com/opendatalab/DocLayout-YOLO
+# Author: Juan Huguet <juan@anyformat.ai> (Anyformat AI)
+# License: Ultralytics Enterprise License
+#
+# Based on DocLayout-YOLO: https://github.com/opendatalab/DocLayout-YOLO
 # Paper: https://arxiv.org/abs/2410.12628
 
 # Parameters

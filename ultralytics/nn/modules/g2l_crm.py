@@ -1,9 +1,12 @@
-# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+# Ultralytics Enterprise License - https://ultralytics.com/license
 #
 # G2L_CRM (Global-to-Local Context Refining Module)
-# Adapted from DocLayout-YOLO: https://github.com/opendatalab/DocLayout-YOLO
+# Integration Author: Juan Huguet <juan@anyformat.ai> (Anyformat AI)
+# License: Ultralytics Enterprise License
+#
+# Based on DocLayout-YOLO: https://github.com/opendatalab/DocLayout-YOLO
 # Paper: https://arxiv.org/abs/2410.12628
-# Authors: Zhiyuan Zhao, Hengrui Kang, Bin Wang, Conghui He
+# Original Authors: Zhiyuan Zhao, Hengrui Kang, Bin Wang, Conghui He
 
 import math
 from functools import partial
