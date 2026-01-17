@@ -4,7 +4,7 @@
 # Paper: https://arxiv.org/abs/2410.12628
 
 # Parameters
-nc: 10 # number of classes (DocLayout: Caption, Footnote, Formula, List-item, Page-footer, Page-header, Picture, Section-header, Table, Text)
+nc: 11 # number of classes (DocLayNet: Caption, Footnote, Formula, List-item, Page-footer, Page-header, Picture, Section-header, Table, Text, Title)
 scales: # model compound scaling constants, i.e. 'model=yolov8n.yaml' will call yolov8.yaml with scale 'n'
   # [depth, width, max_channels]
   m: [0.67, 0.75, 768] # YOLOv8m summary: 295 layers, 25902640 parameters, 25902624 gradients,  79.3 GFLOPs
